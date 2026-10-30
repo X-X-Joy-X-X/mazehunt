@@ -7,6 +7,8 @@ getting caught costs a life. Every round is saved to results/recordings/ for the
 from __future__ import annotations
 
 import argparse
+import threading
+from pathlib import Path
 
 import pygame
 
@@ -16,7 +18,7 @@ from mazehunt.core.actions import (DOWN, LEFT, RIGHT, SHOOT_DOWN, SHOOT_LEFT, SH
                                    STAY, UP)
 from mazehunt.core.game import Game, Outcome
 from mazehunt.core.maze import Maze
-from mazehunt.record import LevelRecorder, new_session_dir
+from mazehunt.record import RECORDINGS_DIR, LevelRecorder, new_session_dir
 from mazehunt.render.renderer import COLORS, Renderer
 
 MOVE_KEYS = {pygame.K_w: UP, pygame.K_s: DOWN, pygame.K_a: LEFT, pygame.K_d: RIGHT}
@@ -62,18 +64,66 @@ class HumanInput:
         return move if move is not None else STAY
 
 
+MODELS_DIR = RECORDINGS_DIR.parent / "models"
+
+
+class Adapter:
+    """Runs between-level adaptation on a background thread so the window stays responsive.
+    Imported lazily: plain scripted play shouldn't need PyTorch."""
+
+    def __init__(self, model: Path, budget_s: float, seed: int | None):
+        from mazehunt.agents.mappo import Team
+        self.team = Team.load(model)
+        self.budget_s, self.seed = budget_s, seed or 0
+        self.recordings: list[dict] = []
+        self.thread: threading.Thread | None = None
+        self.info: dict = {}
+        self.adaptations = 0
+
+    def controller(self):
+        from mazehunt.agents.mappo import LearnedMonsters
+        tag = f"{self.team.mode}, adapted x{self.adaptations}" if self.adaptations else self.team.mode
+        return LearnedMonsters(self.team, name=tag, seed=self.seed)
+
+    def start(self, record: dict) -> None:
+        self.recordings = (self.recordings + [record])[-3:]  # the player's last 3 levels
+        self.thread = threading.Thread(target=self._run, daemon=True)
+        self.thread.start()
+
+    def _run(self) -> None:
+        from mazehunt.adapt.pipeline import adapt
+        self.team, self.info = adapt(self.team, self.recordings, budget_s=self.budget_s,
+                                     seed=self.seed + len(self.recordings))
+        self.adaptations += 1
+
+    @property
+    def busy(self) -> bool:
+        return self.thread is not None and self.thread.is_alive()
+
+
 def main(argv: list[str] | None = None) -> None:
     parser = argparse.ArgumentParser(description="Play MazeHunt.")
-    parser.add_argument("--monsters", choices=sorted(CONTROLLERS), default="greedy",
-                        help="monster controller (default: greedy)")
+    parser.add_argument("--monsters", choices=sorted(CONTROLLERS) + ["learned"], default="greedy",
+                        help="monster controller (default: greedy); 'learned' loads --model")
+    parser.add_argument("--model", type=Path, default=MODELS_DIR / "mappo_s0.pt",
+                        help="trained team for --monsters learned")
+    parser.add_argument("--adapt", type=float, default=0.0, metavar="SECONDS",
+                        help="with --monsters learned: fine-tune against your ghost between levels")
     parser.add_argument("--seed", type=int, default=None, help="seed for the monsters' randomness")
     parser.add_argument("--no-record", action="store_true", help="don't save gameplay recordings")
     args = parser.parse_args(argv)
+    if args.adapt and args.monsters != "learned":
+        parser.error("--adapt needs --monsters learned")
 
     config = GameConfig()
     maze = Maze.load(config.map_name)
     game = Game(maze, config)
-    monsters = CONTROLLERS[args.monsters](seed=args.seed)
+    adapter = None
+    if args.monsters == "learned":
+        adapter = Adapter(args.model, args.adapt, args.seed)
+        monsters = adapter.controller()
+    else:
+        monsters = CONTROLLERS[args.monsters](seed=args.seed)
 
     pygame.init()
     pygame.display.set_caption("MazeHunt")
@@ -89,6 +139,7 @@ def main(argv: list[str] | None = None) -> None:
     tick_seconds = 1.0 / config.ticks_per_second
     since_tick = 0.0
     last_save = None
+    last_record = None
 
     def start_level() -> None:
         nonlocal since_tick
@@ -113,6 +164,10 @@ def main(argv: list[str] | None = None) -> None:
             elif state == "paused" and event.key in (pygame.K_p, *CONFIRM_KEYS):
                 state = "playing"
             elif state in ("title", "level_end", "game_over") and event.key in CONFIRM_KEYS:
+                if state == "level_end" and adapter is not None and args.adapt and last_record:
+                    adapter.start(last_record)
+                    state = "adapting"
+                    continue
                 if state == "level_end":
                     level += 1
                 elif state == "game_over":
@@ -121,6 +176,12 @@ def main(argv: list[str] | None = None) -> None:
                 state = "playing"
             elif state == "playing":
                 human.on_keydown(event.key)
+
+        if state == "adapting" and not adapter.busy:
+            monsters = adapter.controller()
+            level += 1
+            start_level()
+            state = "playing"
 
         if state == "playing":
             since_tick += dt
@@ -132,6 +193,7 @@ def main(argv: list[str] | None = None) -> None:
                     recorder.log(game, action, monster_actions)
                 game.step(action, monster_actions)
             if game.done:
+                last_record = recorder.as_record(level, game, monsters.name)
                 if not args.no_record:
                     last_save = recorder.save(session_dir, level, game, monsters.name)
                 if game.outcome is Outcome.CAUGHT:
@@ -139,7 +201,8 @@ def main(argv: list[str] | None = None) -> None:
                 state = "game_over" if lives == 0 else "level_end"
 
         alpha = min(since_tick / tick_seconds, 1.0) if state == "playing" else 1.0
-        renderer.draw(screen, game, alpha, level, lives, f"{monsters.name} (scripted)")
+        label = monsters.name if adapter is not None else f"{monsters.name} (scripted)"
+        renderer.draw(screen, game, alpha, level, lives, label)
 
         if state == "title":
             renderer.draw_overlay(screen, "MAZEHUNT", [
@@ -160,10 +223,16 @@ def main(argv: list[str] | None = None) -> None:
             renderer.draw_overlay(screen, f"LEVEL {level}: {title}", [
                 f"Lives left: {lives}",
                 "",
-                "The monsters will learn from this round once adaptation is built (week 4).",
+                ("The monsters will study this round before the next one." if adapter is not None and args.adapt
+                 else "Play with --monsters learned --adapt 30 to make the monsters learn from you."),
                 "",
                 f"Press ENTER for level {level + 1}",
             ], color)
+        elif state == "adapting":
+            renderer.draw_overlay(screen, "THE MONSTERS ARE STUDYING YOU", [
+                f"Cloning how you played your last {len(adapter.recordings)} level(s),",
+                f"then practising against your ghost for about {args.adapt:.0f} s.",
+            ], COLORS["bad"])
         elif state == "game_over":
             renderer.draw_overlay(screen, "GAME OVER", [
                 f"You reached level {level}.",

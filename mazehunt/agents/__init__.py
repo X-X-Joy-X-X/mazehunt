@@ -5,6 +5,7 @@ learned one:
 
     actions = controller.act(game)   # one action per monster, in game.monsters order
 
-Week 1: scripted baselines (scripted_monsters.py).
-Week 2+: MAPPO / IPPO learned teams, and the ghost player (behavior cloning).
+scripted_monsters.py  hand-written baselines (greedy chasers, random)
+mappo.py              MAPPO / IPPO learned teams (LearnedMonsters) and the PPO trainer
+The ghost player (behavior cloning of the human) lives in mazehunt/adapt/ghost.py.
 """

@@ -1,1 +1,1 @@
-"""Between-level adaptation: recordings → ghost player → fine-tuned monsters. Week 4."""
+"""Between-level adaptation: recordings -> ghost player (ghost.py) -> fine-tuned monster team (pipeline.py)."""

@@ -1,0 +1,67 @@
+{
+  "mode": "mappo",
+  "seed": 0,
+  "bot": "runner_bottom_left",
+  "rows": [
+    {
+      "budget_s": 0,
+      "episodes": 200,
+      "capture_rate": 0.185,
+      "escape_rate": 0.815,
+      "survive_rate": 0.0,
+      "mean_capture_ticks": 27.81081081081081
+    },
+    {
+      "budget_s": 10.0,
+      "ghost_examples": 69,
+      "ghost_accuracy": 0.957,
+      "ghost_seconds": 3.52,
+      "finetune_steps": 40960,
+      "total_seconds": 10.3,
+      "episodes": 200,
+      "capture_rate": 0.17,
+      "escape_rate": 0.83,
+      "survive_rate": 0.0,
+      "mean_capture_ticks": 29.764705882352942
+    },
+    {
+      "budget_s": 30.0,
+      "ghost_examples": 69,
+      "ghost_accuracy": 0.957,
+      "ghost_seconds": 0.41,
+      "finetune_steps": 180224,
+      "total_seconds": 30.2,
+      "episodes": 200,
+      "capture_rate": 0.175,
+      "escape_rate": 0.825,
+      "survive_rate": 0.0,
+      "mean_capture_ticks": 29.4
+    },
+    {
+      "budget_s": 60.0,
+      "ghost_examples": 69,
+      "ghost_accuracy": 0.957,
+      "ghost_seconds": 0.42,
+      "finetune_steps": 364544,
+      "total_seconds": 60.0,
+      "episodes": 200,
+      "capture_rate": 0.17,
+      "escape_rate": 0.83,
+      "survive_rate": 0.0,
+      "mean_capture_ticks": 30.558823529411764
+    },
+    {
+      "budget_s": 120.0,
+      "ghost_examples": 69,
+      "ghost_accuracy": 0.957,
+      "ghost_seconds": 0.47,
+      "finetune_steps": 704512,
+      "total_seconds": 120.3,
+      "episodes": 200,
+      "capture_rate": 0.2,
+      "escape_rate": 0.8,
+      "survive_rate": 0.0,
+      "mean_capture_ticks": 31.3
+    }
+  ]
+}

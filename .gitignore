@@ -4,3 +4,5 @@ __pycache__/
 .pytest_cache/
 results/recordings/
 runs/
+# raw run logs (contain local paths); training curves (*.jsonl) are kept
+results/logs/*.txt

@@ -39,10 +39,9 @@ class LevelRecorder:
             "monster_actions": list(monster_actions),
         })
 
-    def save(self, session_dir: Path, level: int, game: Game, monster_controller: str) -> Path:
-        session_dir.mkdir(parents=True, exist_ok=True)
-        path = session_dir / f"level_{level:02d}.json"
-        path.write_text(json.dumps({
+    def as_record(self, level: int, game: Game, monster_controller: str) -> dict:
+        """The finished level in the saved-file format, kept in memory (bots, adaptation)."""
+        return {
             "level": level,
             "map": game.config.map_name,
             "monster_controller": monster_controller,
@@ -50,5 +49,14 @@ class LevelRecorder:
             "ticks_played": game.tick,
             "config": asdict(game.config),
             "steps": self.steps,
-        }))
+        }
+
+    def save(self, session_dir: Path, level: int, game: Game, monster_controller: str) -> Path:
+        session_dir.mkdir(parents=True, exist_ok=True)
+        path = session_dir / f"level_{level:02d}.json"
+        path.write_text(json.dumps(self.as_record(level, game, monster_controller)))
         return path
+
+
+def load_recordings(paths: list[Path]) -> list[dict]:
+    return [json.loads(Path(p).read_text()) for p in paths]

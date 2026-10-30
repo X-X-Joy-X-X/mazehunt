@@ -1,0 +1,695 @@
+[
+ {
+  "team": "greedy",
+  "bot": "exit_runner",
+  "capture_rate": 0.155,
+  "escape_rate": 0.845,
+  "exit_cover": 0.0,
+  "spread": 6.026122448979592,
+  "held_out": false
+ },
+ {
+  "team": "greedy",
+  "bot": "runner_top_right",
+  "capture_rate": 0.035,
+  "escape_rate": 0.965,
+  "exit_cover": 0.00017543859649122806,
+  "spread": 5.839393350184717,
+  "held_out": false
+ },
+ {
+  "team": "greedy",
+  "bot": "runner_middle",
+  "capture_rate": 0.115,
+  "escape_rate": 0.885,
+  "exit_cover": 0.0,
+  "spread": 5.70925470925471,
+  "held_out": false
+ },
+ {
+  "team": "greedy",
+  "bot": "camper_bottom_left",
+  "capture_rate": 0.725,
+  "escape_rate": 0.0,
+  "exit_cover": 0.0,
+  "spread": 6.730023741185642,
+  "held_out": false
+ },
+ {
+  "team": "greedy",
+  "bot": "camper_top_right",
+  "capture_rate": 0.57,
+  "escape_rate": 0.0,
+  "exit_cover": 0.0,
+  "spread": 7.169078466547074,
+  "held_out": false
+ },
+ {
+  "team": "greedy",
+  "bot": "kiter",
+  "capture_rate": 1.0,
+  "escape_rate": 0.0,
+  "exit_cover": 0.0,
+  "spread": 6.434653315126688,
+  "held_out": false
+ },
+ {
+  "team": "greedy",
+  "bot": "hunter",
+  "capture_rate": 0.185,
+  "escape_rate": 0.815,
+  "exit_cover": 0.0,
+  "spread": 6.029163468917882,
+  "held_out": false
+ },
+ {
+  "team": "greedy",
+  "bot": "random",
+  "capture_rate": 1.0,
+  "escape_rate": 0.0,
+  "exit_cover": 0.0,
+  "spread": 6.163961714523512,
+  "held_out": false
+ },
+ {
+  "team": "greedy",
+  "bot": "runner_bottom_left",
+  "capture_rate": 0.26,
+  "escape_rate": 0.74,
+  "exit_cover": 0.0,
+  "spread": 5.225544063779357,
+  "held_out": true
+ },
+ {
+  "team": "greedy",
+  "bot": "waiter_left",
+  "capture_rate": 0.17,
+  "escape_rate": 0.83,
+  "exit_cover": 0.0,
+  "spread": 5.761334076551468,
+  "held_out": true
+ },
+ {
+  "team": "greedy",
+  "bot": "camper_top_middle",
+  "capture_rate": 0.685,
+  "escape_rate": 0.0,
+  "exit_cover": 0.0,
+  "spread": 5.793084688387838,
+  "held_out": true
+ },
+ {
+  "team": "ippo_s0",
+  "bot": "exit_runner",
+  "capture_rate": 0.22,
+  "escape_rate": 0.78,
+  "exit_cover": 0.0,
+  "spread": 5.610437925170068,
+  "held_out": false
+ },
+ {
+  "team": "ippo_s0",
+  "bot": "runner_top_right",
+  "capture_rate": 0.06,
+  "escape_rate": 0.94,
+  "exit_cover": 0.0,
+  "spread": 6.652293218345747,
+  "held_out": false
+ },
+ {
+  "team": "ippo_s0",
+  "bot": "runner_middle",
+  "capture_rate": 0.2,
+  "escape_rate": 0.8,
+  "exit_cover": 0.0,
+  "spread": 5.712303094767766,
+  "held_out": false
+ },
+ {
+  "team": "ippo_s0",
+  "bot": "camper_bottom_left",
+  "capture_rate": 0.665,
+  "escape_rate": 0.0,
+  "exit_cover": 0.0,
+  "spread": 7.08251677852349,
+  "held_out": false
+ },
+ {
+  "team": "ippo_s0",
+  "bot": "camper_top_right",
+  "capture_rate": 0.455,
+  "escape_rate": 0.0,
+  "exit_cover": 0.0,
+  "spread": 7.095250222844773,
+  "held_out": false
+ },
+ {
+  "team": "ippo_s0",
+  "bot": "kiter",
+  "capture_rate": 0.955,
+  "escape_rate": 0.0,
+  "exit_cover": 0.0,
+  "spread": 7.045866501257797,
+  "held_out": false
+ },
+ {
+  "team": "ippo_s0",
+  "bot": "hunter",
+  "capture_rate": 0.245,
+  "escape_rate": 0.74,
+  "exit_cover": 0.0,
+  "spread": 5.919449027155839,
+  "held_out": false
+ },
+ {
+  "team": "ippo_s0",
+  "bot": "random",
+  "capture_rate": 1.0,
+  "escape_rate": 0.0,
+  "exit_cover": 0.0,
+  "spread": 6.300361532899494,
+  "held_out": false
+ },
+ {
+  "team": "ippo_s0",
+  "bot": "runner_bottom_left",
+  "capture_rate": 0.21,
+  "escape_rate": 0.79,
+  "exit_cover": 0.0,
+  "spread": 6.1631335111610275,
+  "held_out": true
+ },
+ {
+  "team": "ippo_s0",
+  "bot": "waiter_left",
+  "capture_rate": 0.185,
+  "escape_rate": 0.815,
+  "exit_cover": 0.0,
+  "spread": 5.715842678881693,
+  "held_out": true
+ },
+ {
+  "team": "ippo_s0",
+  "bot": "camper_top_middle",
+  "capture_rate": 0.6,
+  "escape_rate": 0.0,
+  "exit_cover": 0.0,
+  "spread": 6.102344986332902,
+  "held_out": true
+ },
+ {
+  "team": "ippo_s1",
+  "bot": "exit_runner",
+  "capture_rate": 0.185,
+  "escape_rate": 0.815,
+  "exit_cover": 0.0,
+  "spread": 4.898302317988899,
+  "held_out": false
+ },
+ {
+  "team": "ippo_s1",
+  "bot": "runner_top_right",
+  "capture_rate": 0.005,
+  "escape_rate": 0.995,
+  "exit_cover": 0.0007331999255398361,
+  "spread": 7.509112128557322,
+  "held_out": false
+ },
+ {
+  "team": "ippo_s1",
+  "bot": "runner_middle",
+  "capture_rate": 0.22,
+  "escape_rate": 0.78,
+  "exit_cover": 0.0,
+  "spread": 5.391797235023041,
+  "held_out": false
+ },
+ {
+  "team": "ippo_s1",
+  "bot": "camper_bottom_left",
+  "capture_rate": 0.875,
+  "escape_rate": 0.0,
+  "exit_cover": 0.0,
+  "spread": 6.535170667313237,
+  "held_out": false
+ },
+ {
+  "team": "ippo_s1",
+  "bot": "camper_top_right",
+  "capture_rate": 0.58,
+  "escape_rate": 0.0,
+  "exit_cover": 0.0,
+  "spread": 8.05678994648318,
+  "held_out": false
+ },
+ {
+  "team": "ippo_s1",
+  "bot": "kiter",
+  "capture_rate": 0.985,
+  "escape_rate": 0.0,
+  "exit_cover": 0.0,
+  "spread": 6.548898399112379,
+  "held_out": false
+ },
+ {
+  "team": "ippo_s1",
+  "bot": "hunter",
+  "capture_rate": 0.35,
+  "escape_rate": 0.63,
+  "exit_cover": 0.0,
+  "spread": 4.959308240081383,
+  "held_out": false
+ },
+ {
+  "team": "ippo_s1",
+  "bot": "random",
+  "capture_rate": 1.0,
+  "escape_rate": 0.0,
+  "exit_cover": 0.0,
+  "spread": 6.19915359721185,
+  "held_out": false
+ },
+ {
+  "team": "ippo_s1",
+  "bot": "runner_bottom_left",
+  "capture_rate": 0.32,
+  "escape_rate": 0.68,
+  "exit_cover": 0.0,
+  "spread": 6.282327686779598,
+  "held_out": true
+ },
+ {
+  "team": "ippo_s1",
+  "bot": "waiter_left",
+  "capture_rate": 0.17,
+  "escape_rate": 0.83,
+  "exit_cover": 0.0,
+  "spread": 4.999804171154411,
+  "held_out": true
+ },
+ {
+  "team": "ippo_s1",
+  "bot": "camper_top_middle",
+  "capture_rate": 0.71,
+  "escape_rate": 0.0,
+  "exit_cover": 0.0,
+  "spread": 5.585825705515214,
+  "held_out": true
+ },
+ {
+  "team": "ippo_s2",
+  "bot": "exit_runner",
+  "capture_rate": 0.15,
+  "escape_rate": 0.85,
+  "exit_cover": 0.0,
+  "spread": 6.116675226844719,
+  "held_out": false
+ },
+ {
+  "team": "ippo_s2",
+  "bot": "runner_top_right",
+  "capture_rate": 0.025,
+  "escape_rate": 0.975,
+  "exit_cover": 0.0,
+  "spread": 6.451980068187779,
+  "held_out": false
+ },
+ {
+  "team": "ippo_s2",
+  "bot": "runner_middle",
+  "capture_rate": 0.155,
+  "escape_rate": 0.845,
+  "exit_cover": 0.0,
+  "spread": 5.914305949008498,
+  "held_out": false
+ },
+ {
+  "team": "ippo_s2",
+  "bot": "camper_bottom_left",
+  "capture_rate": 0.51,
+  "escape_rate": 0.0,
+  "exit_cover": 0.0,
+  "spread": 6.467678905028785,
+  "held_out": false
+ },
+ {
+  "team": "ippo_s2",
+  "bot": "camper_top_right",
+  "capture_rate": 0.46,
+  "escape_rate": 0.0,
+  "exit_cover": 0.0,
+  "spread": 6.893476096457921,
+  "held_out": false
+ },
+ {
+  "team": "ippo_s2",
+  "bot": "kiter",
+  "capture_rate": 0.98,
+  "escape_rate": 0.0,
+  "exit_cover": 0.0,
+  "spread": 6.990708417080998,
+  "held_out": false
+ },
+ {
+  "team": "ippo_s2",
+  "bot": "hunter",
+  "capture_rate": 0.25,
+  "escape_rate": 0.75,
+  "exit_cover": 0.0,
+  "spread": 6.165544688598162,
+  "held_out": false
+ },
+ {
+  "team": "ippo_s2",
+  "bot": "random",
+  "capture_rate": 1.0,
+  "escape_rate": 0.0,
+  "exit_cover": 0.0,
+  "spread": 6.359966613551863,
+  "held_out": false
+ },
+ {
+  "team": "ippo_s2",
+  "bot": "runner_bottom_left",
+  "capture_rate": 0.185,
+  "escape_rate": 0.815,
+  "exit_cover": 0.0,
+  "spread": 5.486498876816578,
+  "held_out": true
+ },
+ {
+  "team": "ippo_s2",
+  "bot": "waiter_left",
+  "capture_rate": 0.13,
+  "escape_rate": 0.87,
+  "exit_cover": 0.0,
+  "spread": 6.105389632681085,
+  "held_out": true
+ },
+ {
+  "team": "ippo_s2",
+  "bot": "camper_top_middle",
+  "capture_rate": 0.655,
+  "escape_rate": 0.0,
+  "exit_cover": 0.0,
+  "spread": 6.111309963817453,
+  "held_out": true
+ },
+ {
+  "team": "mappo_s0",
+  "bot": "exit_runner",
+  "capture_rate": 0.085,
+  "escape_rate": 0.915,
+  "exit_cover": 0.0,
+  "spread": 8.014025743453173,
+  "held_out": false
+ },
+ {
+  "team": "mappo_s0",
+  "bot": "runner_top_right",
+  "capture_rate": 0.04,
+  "escape_rate": 0.96,
+  "exit_cover": 0.0004980392156862745,
+  "spread": 8.155820837579464,
+  "held_out": false
+ },
+ {
+  "team": "mappo_s0",
+  "bot": "runner_middle",
+  "capture_rate": 0.15,
+  "escape_rate": 0.85,
+  "exit_cover": 0.0,
+  "spread": 7.892191142191143,
+  "held_out": false
+ },
+ {
+  "team": "mappo_s0",
+  "bot": "camper_bottom_left",
+  "capture_rate": 0.65,
+  "escape_rate": 0.0,
+  "exit_cover": 0.0,
+  "spread": 7.540470452271221,
+  "held_out": false
+ },
+ {
+  "team": "mappo_s0",
+  "bot": "camper_top_right",
+  "capture_rate": 0.515,
+  "escape_rate": 0.0,
+  "exit_cover": 0.0,
+  "spread": 7.537937166567872,
+  "held_out": false
+ },
+ {
+  "team": "mappo_s0",
+  "bot": "kiter",
+  "capture_rate": 0.99,
+  "escape_rate": 0.0,
+  "exit_cover": 0.0,
+  "spread": 8.82134787557549,
+  "held_out": false
+ },
+ {
+  "team": "mappo_s0",
+  "bot": "hunter",
+  "capture_rate": 0.185,
+  "escape_rate": 0.815,
+  "exit_cover": 0.0,
+  "spread": 8.41934184788862,
+  "held_out": false
+ },
+ {
+  "team": "mappo_s0",
+  "bot": "random",
+  "capture_rate": 1.0,
+  "escape_rate": 0.0,
+  "exit_cover": 0.0,
+  "spread": 9.423929098966026,
+  "held_out": false
+ },
+ {
+  "team": "mappo_s0",
+  "bot": "runner_bottom_left",
+  "capture_rate": 0.145,
+  "escape_rate": 0.855,
+  "exit_cover": 0.0,
+  "spread": 9.258681785967399,
+  "held_out": true
+ },
+ {
+  "team": "mappo_s0",
+  "bot": "waiter_left",
+  "capture_rate": 0.09,
+  "escape_rate": 0.91,
+  "exit_cover": 0.0,
+  "spread": 7.98221517872865,
+  "held_out": true
+ },
+ {
+  "team": "mappo_s0",
+  "bot": "camper_top_middle",
+  "capture_rate": 0.635,
+  "escape_rate": 0.0,
+  "exit_cover": 0.0,
+  "spread": 6.866702955925045,
+  "held_out": true
+ },
+ {
+  "team": "mappo_s1",
+  "bot": "exit_runner",
+  "capture_rate": 0.71,
+  "escape_rate": 0.285,
+  "exit_cover": 0.6046702073478246,
+  "spread": 10.062832244008714,
+  "held_out": false
+ },
+ {
+  "team": "mappo_s1",
+  "bot": "runner_top_right",
+  "capture_rate": 0.73,
+  "escape_rate": 0.265,
+  "exit_cover": 0.6338341879037169,
+  "spread": 10.697480693758703,
+  "held_out": false
+ },
+ {
+  "team": "mappo_s1",
+  "bot": "runner_middle",
+  "capture_rate": 0.71,
+  "escape_rate": 0.285,
+  "exit_cover": 0.6177309848731053,
+  "spread": 9.906201683559527,
+  "held_out": false
+ },
+ {
+  "team": "mappo_s1",
+  "bot": "camper_bottom_left",
+  "capture_rate": 0.36,
+  "escape_rate": 0.0,
+  "exit_cover": 0.11522004590314427,
+  "spread": 17.06844994211834,
+  "held_out": false
+ },
+ {
+  "team": "mappo_s1",
+  "bot": "camper_top_right",
+  "capture_rate": 0.33,
+  "escape_rate": 0.0,
+  "exit_cover": 0.6131710675554142,
+  "spread": 11.10797159082981,
+  "held_out": false
+ },
+ {
+  "team": "mappo_s1",
+  "bot": "kiter",
+  "capture_rate": 0.92,
+  "escape_rate": 0.0,
+  "exit_cover": 0.04056242537266251,
+  "spread": 16.876635210705015,
+  "held_out": false
+ },
+ {
+  "team": "mappo_s1",
+  "bot": "hunter",
+  "capture_rate": 0.47,
+  "escape_rate": 0.205,
+  "exit_cover": 0.7134082233273559,
+  "spread": 9.694901508846065,
+  "held_out": false
+ },
+ {
+  "team": "mappo_s1",
+  "bot": "random",
+  "capture_rate": 1.0,
+  "escape_rate": 0.0,
+  "exit_cover": 0.0008287037037037037,
+  "spread": 11.772607176340237,
+  "held_out": false
+ },
+ {
+  "team": "mappo_s1",
+  "bot": "runner_bottom_left",
+  "capture_rate": 0.745,
+  "escape_rate": 0.255,
+  "exit_cover": 0.5873427195989805,
+  "spread": 11.455434663149797,
+  "held_out": true
+ },
+ {
+  "team": "mappo_s1",
+  "bot": "waiter_left",
+  "capture_rate": 0.69,
+  "escape_rate": 0.3,
+  "exit_cover": 0.60517783286878,
+  "spread": 9.984870230833634,
+  "held_out": true
+ },
+ {
+  "team": "mappo_s1",
+  "bot": "camper_top_middle",
+  "capture_rate": 0.475,
+  "escape_rate": 0.0,
+  "exit_cover": 0.21783511872962216,
+  "spread": 12.720935738978074,
+  "held_out": true
+ },
+ {
+  "team": "mappo_s2",
+  "bot": "exit_runner",
+  "capture_rate": 0.17,
+  "escape_rate": 0.83,
+  "exit_cover": 0.0,
+  "spread": 4.481711931388212,
+  "held_out": false
+ },
+ {
+  "team": "mappo_s2",
+  "bot": "runner_top_right",
+  "capture_rate": 0.055,
+  "escape_rate": 0.945,
+  "exit_cover": 0.0013876843416668041,
+  "spread": 8.121371568885381,
+  "held_out": false
+ },
+ {
+  "team": "mappo_s2",
+  "bot": "runner_middle",
+  "capture_rate": 0.295,
+  "escape_rate": 0.705,
+  "exit_cover": 0.0,
+  "spread": 4.550654905105587,
+  "held_out": false
+ },
+ {
+  "team": "mappo_s2",
+  "bot": "camper_bottom_left",
+  "capture_rate": 0.755,
+  "escape_rate": 0.0,
+  "exit_cover": 0.0,
+  "spread": 6.052117294625728,
+  "held_out": false
+ },
+ {
+  "team": "mappo_s2",
+  "bot": "camper_top_right",
+  "capture_rate": 0.625,
+  "escape_rate": 0.0,
+  "exit_cover": 1.3440860215053765e-05,
+  "spread": 8.046348636131508,
+  "held_out": false
+ },
+ {
+  "team": "mappo_s2",
+  "bot": "kiter",
+  "capture_rate": 0.975,
+  "escape_rate": 0.0,
+  "exit_cover": 0.0,
+  "spread": 6.796466608525595,
+  "held_out": false
+ },
+ {
+  "team": "mappo_s2",
+  "bot": "hunter",
+  "capture_rate": 0.425,
+  "escape_rate": 0.48,
+  "exit_cover": 0.0,
+  "spread": 5.49649105785712,
+  "held_out": false
+ },
+ {
+  "team": "mappo_s2",
+  "bot": "random",
+  "capture_rate": 1.0,
+  "escape_rate": 0.0,
+  "exit_cover": 0.0,
+  "spread": 7.350439534331195,
+  "held_out": false
+ },
+ {
+  "team": "mappo_s2",
+  "bot": "runner_bottom_left",
+  "capture_rate": 0.225,
+  "escape_rate": 0.775,
+  "exit_cover": 0.0,
+  "spread": 5.449809861001836,
+  "held_out": true
+ },
+ {
+  "team": "mappo_s2",
+  "bot": "waiter_left",
+  "capture_rate": 0.17,
+  "escape_rate": 0.83,
+  "exit_cover": 0.0,
+  "spread": 4.4114253209816345,
+  "held_out": true
+ },
+ {
+  "team": "mappo_s2",
+  "bot": "camper_top_middle",
+  "capture_rate": 0.545,
+  "escape_rate": 0.0,
+  "exit_cover": 0.0,
+  "spread": 6.0980543568778875,
+  "held_out": true
+ }
+]

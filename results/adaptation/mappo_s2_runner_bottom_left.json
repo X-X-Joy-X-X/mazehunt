@@ -1,0 +1,115 @@
+{
+  "mode": "mappo",
+  "seed": 2,
+  "bot": "runner_bottom_left",
+  "budget_s": 45.0,
+  "episodes": 200,
+  "pretrained": {
+    "episodes": 200,
+    "capture_rate": 0.165,
+    "escape_rate": 0.835,
+    "survive_rate": 0.0,
+    "mean_capture_ticks": 39.15151515151515
+  },
+  "levels": [
+    {
+      "after_level": 1,
+      "recorded_ticks": 110,
+      "level_outcome": "escaped",
+      "ghost_examples": 110,
+      "ghost_accuracy": 0.955,
+      "ghost_seconds": 7.44,
+      "finetune_steps": 79872,
+      "total_seconds": 45.4,
+      "episodes": 200,
+      "capture_rate": 0.245,
+      "escape_rate": 0.755,
+      "survive_rate": 0.0,
+      "mean_capture_ticks": 27.714285714285715
+    },
+    {
+      "after_level": 2,
+      "recorded_ticks": 133,
+      "level_outcome": "caught",
+      "ghost_examples": 133,
+      "ghost_accuracy": 0.977,
+      "ghost_seconds": 1.47,
+      "finetune_steps": 90112,
+      "total_seconds": 45.1,
+      "episodes": 200,
+      "capture_rate": 0.24,
+      "escape_rate": 0.76,
+      "survive_rate": 0.0,
+      "mean_capture_ticks": 30.083333333333332
+    },
+    {
+      "after_level": 3,
+      "recorded_ticks": 157,
+      "level_outcome": "caught",
+      "ghost_examples": 157,
+      "ghost_accuracy": 0.968,
+      "ghost_seconds": 1.57,
+      "finetune_steps": 100352,
+      "total_seconds": 45.3,
+      "episodes": 200,
+      "capture_rate": 0.09,
+      "escape_rate": 0.91,
+      "survive_rate": 0.0,
+      "mean_capture_ticks": 27.166666666666668
+    },
+    {
+      "after_level": 4,
+      "recorded_ticks": 216,
+      "level_outcome": "escaped",
+      "ghost_examples": 216,
+      "ghost_accuracy": 0.958,
+      "ghost_seconds": 1.87,
+      "finetune_steps": 100352,
+      "total_seconds": 46.1,
+      "episodes": 200,
+      "capture_rate": 0.325,
+      "escape_rate": 0.675,
+      "survive_rate": 0.0,
+      "mean_capture_ticks": 25.184615384615384
+    }
+  ],
+  "more_pretraining": {
+    "episodes": 200,
+    "capture_rate": 0.235,
+    "escape_rate": 0.765,
+    "survive_rate": 0.0,
+    "mean_capture_ticks": 46.4468085106383
+  },
+  "oracle": {
+    "episodes": 200,
+    "capture_rate": 0.315,
+    "escape_rate": 0.685,
+    "survive_rate": 0.0,
+    "mean_capture_ticks": 36.17460317460318
+  },
+  "one_shot_1_levels": {
+    "ghost_examples": 110,
+    "ghost_accuracy": 0.964,
+    "ghost_seconds": 4.52,
+    "finetune_steps": 49152,
+    "total_seconds": 45.9,
+    "episodes": 200,
+    "capture_rate": 0.255,
+    "escape_rate": 0.745,
+    "survive_rate": 0.0,
+    "mean_capture_ticks": 25.84313725490196
+  },
+  "one_shot_3_levels": {
+    "ghost_examples": 157,
+    "ghost_accuracy": 0.955,
+    "ghost_seconds": 2.0,
+    "finetune_steps": 98304,
+    "total_seconds": 45.1,
+    "episodes": 200,
+    "capture_rate": 0.235,
+    "escape_rate": 0.765,
+    "survive_rate": 0.0,
+    "mean_capture_ticks": 26.21276595744681
+  },
+  "wall_seconds": 387.7
+}
